@@ -1,0 +1,48 @@
+﻿Field,Type,Size (bytes),Value
+Message Name,unsigned integer,4,LG_Data_GP
+Message Length,unsigned integer,4,"length of this message in bytes, excluding the first three fields"
+Simulation Time,unsigned integer,4,the simulation time in seconds that the data in this message represents
+Request Type,unsigned integer,4,DR_TS_INCIDENT
+Request Handle,unsigned integer,4,1
+Class ID,unsigned integer,4,Incident
+Action ID,unsigned integer,2,SEARCH
+Attribute ID Count,unsigned integer,2,12
+Attribute ID #1,unsigned integer,2,IN_IncidentId
+Attribute ID #2,unsigned integer,2,IN_LinkId
+Attribute ID #3,unsigned integer,2,IN_IncidentType
+Attribute ID #4,unsigned integer,2,IN_IncidentPosition
+Attribute ID #5,unsigned integer,2,IN_IncidentLength
+Attribute ID #6,unsigned integer,2,IN_OccurrenceTime
+Attribute ID #7,unsigned integer,2,IN_Duration
+Attribute ID #8,unsigned integer,2,IN_IncidentReactionPointPosition
+Attribute ID #9,unsigned integer,2,IN_RubberneckFactor
+Attribute ID #10,unsigned integer,2,IN_ModelType
+Attribute ID #11,unsigned integer,2,IN_IncidentState
+Attribute ID #12,unsigned integer,2,IN_AffectedLaneSLT
+Number of Aggregate Classes,unsigned integer,2,0
+Instance ID Count,unsigned integer,2,number of incidents in the network at the specified simulation time
+,,,
+Instance ID,unsigned integer,4,ID of first incident in this message
+Incident ID,unsigned integer,4,ID of the incident (same value as previous field)
+Link ID,unsigned integer,4,ID of link on which the specified incident is occurring
+Type,unsigned integer,2,"Incident Type: 0 = unknown, 1 = freeway, 2 = long term, 3 = parking, 4 = short term"
+Position,float (IEEE format),4,position of incident along link measured in feet from link’s upstream end
+Length,float (IEEE format),4,length of the incident in feet
+Occurrence Time,unsigned integer,4,time step at which this incident begins
+Duration,unsigned integer,4,number of time steps this incident affects traffic
+Reaction Point Position,float (IEEE format),4,distance upstream from the start of the incident at which vehicles begin to react to the incident
+Rubbernecking Factor,float (IEEE format),4,CORSIM rubbernecking factor in %
+Model Type,unsigned integer,2,"CORSIM model type: 3 = NETSIM, 8 = FRESIM"
+State,unsigned integer,2,"incident state: 0 = not in progress, 1 = in progress"
+Number of Affected Lanes,unsigned integer,2,number of lanes affected by the incident (maximum = 11)
+Affected Lane ID,unsigned integer,4,CORSIM lane ID of first lane affected by the incident
+Status Code,unsigned integer,2,"incident code for first lane: 0 = unaffected, 1 = rubbernecking, 2 = blocked"
+Affected Lane ID,unsigned integer,4,CORSIM lane ID of second lane affected by the incident
+Status Code,unsigned integer,2,"incident code for second lane: 0 = unaffected, 1 = rubbernecking, 2 = blocked"
+•,,,
+,,,
+•,,,
+,,,
+•,,,
+Affected Lane ID,unsigned integer,4,CORSIM lane ID of last lane affected by the incident
+Status Code,unsigned integer,2,"incident code for last lane: 0 = unaffected, 1 = rubbernecking, 2 = blocked"
