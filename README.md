@@ -1,5 +1,7 @@
 # corsim_binary_parser
 
+<img src="doc/corsim.jpg" alt="corsim" style="zoom:70%;" />
+
 > The TSD (time-step data file) is created by CORSIM and contains the positions and speeds of all vehicles in the CORSIM network. CORSIM creates a TSD file as it runs. When finished, programs like TRAFVU can read the TSD file, permitting visual review of the inner workings of the simulation.
 >
 > ----  Dr. John Leonard
