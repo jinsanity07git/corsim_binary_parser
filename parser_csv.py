@@ -54,7 +54,6 @@ print(''.join(decode_ls))
 
 # curB = 16
 # ## Vehicle Message [0,6]: unsigned int
-
 head1l = ['link_info', 'Message Name', 'Message Length', 'Simulation Time', 'Request Type', 'Request Handle', 'Class ID', 'Action ID', 'Attribute ID Count', 'Number of Aggregate Classes', 'Class ID', 'Action ID', 'Attribute ID Count', 'Attribute ID', 'Number of Aggregate Classes', 'Instance ID Count', 'Instance ID', 'Instance ID Count']
 head1 = ",".join(head1l) + "\n"
 
@@ -62,7 +61,7 @@ curB = 16
 dict_all =  {}
 obj_list = []
 percent = 0
-threshold = 5
+threshold = 10  ## change percentage of parseing content: out of 100
 
 
 
